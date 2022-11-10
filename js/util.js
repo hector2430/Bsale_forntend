@@ -26,8 +26,7 @@ function modCategory(category) {
     //Peticion a API
     fetch('https://bsalebackend-production.up.railway.app/categoryApi.php?categoryid='+category, {
         method: "GET",
-        headers: {"Content-type": "application/json;charset=UTF-8",
-                "access-control-allow-origin": "https://bsaleforntend-production.up.railway.app/",
+        headers: {
                 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
                 'Access-Control-Allow-Methods': '*',
                 'Access-Control-Allow-Credentials': 'true'
@@ -63,8 +62,7 @@ function getCategories() {
     //Peticion a API
     fetch('https://bsalebackend-production.up.railway.app/categoryApi.php', {
         method: "GET",
-        headers: {"Content-type": "application/json;charset=UTF-8",
-                "access-control-allow-origin": "https://bsaleforntend-production.up.railway.app/",
+        headers: {
                 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
                 'Access-Control-Allow-Methods': '*',
                 'Access-Control-Allow-Credentials': 'true'
@@ -94,8 +92,7 @@ function getproduct() {
     //Peticion a API
     fetch('https://bsalebackend-production.up.railway.app/productApi.php', {
         method: "GET",
-        headers: {"Content-type": "application/json;charset=UTF-8",
-                "access-control-allow-origin": "https://bsaleforntend-production.up.railway.app/",
+        headers: {
                 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
                 'Access-Control-Allow-Methods': '*',
                 'Access-Control-Allow-Credentials': 'true'
@@ -137,8 +134,7 @@ function SearchProduct(evt) {
         //Peticion a API
         fetch('https://bsalebackend-production.up.railway.app/productApi.php?name='+product, {
             method: "GET",
-            headers: {"Content-type": "application/json;charset=UTF-8",
-                    "access-control-allow-origin": "https://bsaleforntend-production.up.railway.app/",
+            headers: {
                     'Access-Control-Allow-Headers': 'Content-Type, Authorization',
                     'Access-Control-Allow-Methods': '*',
                     'Access-Control-Allow-Credentials': 'true'
