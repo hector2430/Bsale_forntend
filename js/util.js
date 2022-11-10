@@ -60,6 +60,7 @@ function modCategory(category) {
 //Obtener categoria
 function getCategories() {
     //Peticion a API
+    console.log("test");
     fetch('https://bsalebackend-production.up.railway.app/categoryApi.php', {
         method: "GET",
         headers: {"Content-type": "application/json;charset=UTF-8",
@@ -90,6 +91,8 @@ function getCategories() {
 //Obtener Productos
 function getproduct() {
     //Peticion a API
+    console.log("test123");
+
     fetch('https://bsalebackend-production.up.railway.app/productApi.php', {
         method: "GET",
         headers: {"Content-type": "application/json;charset=UTF-8",
