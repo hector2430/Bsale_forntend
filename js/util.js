@@ -27,9 +27,10 @@ function modCategory(category) {
     fetch('https://bsalebackend-production.up.railway.app/categoryApi.php?categoryid='+category, {
         method: "GET",
         headers: {"Content-type": "application/json;charset=UTF-8",
-                "access-control-allow-origin": "*",
+                "access-control-allow-origin": "https://bsaleforntend-production.up.railway.app/",
                 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
                 'Access-Control-Allow-Methods': '*',
+                'Access-Control-Allow-Credentials': 'true'
         }
     })
     .then(res => res.json())
@@ -60,13 +61,13 @@ function modCategory(category) {
 //Obtener categoria
 function getCategories() {
     //Peticion a API
-    console.log("test");
     fetch('https://bsalebackend-production.up.railway.app/categoryApi.php', {
         method: "GET",
         headers: {"Content-type": "application/json;charset=UTF-8",
-                "access-control-allow-origin": "*",
+                "access-control-allow-origin": "https://bsaleforntend-production.up.railway.app/",
                 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
                 'Access-Control-Allow-Methods': '*',
+                'Access-Control-Allow-Credentials': 'true'
         }
     })
     .then(res => res.json())
@@ -91,14 +92,13 @@ function getCategories() {
 //Obtener Productos
 function getproduct() {
     //Peticion a API
-    console.log("test123");
-
     fetch('https://bsalebackend-production.up.railway.app/productApi.php', {
         method: "GET",
         headers: {"Content-type": "application/json;charset=UTF-8",
-                "access-control-allow-origin": "*",
+                "access-control-allow-origin": "https://bsaleforntend-production.up.railway.app/",
                 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
                 'Access-Control-Allow-Methods': '*',
+                'Access-Control-Allow-Credentials': 'true'
         }
     })
     .then(res => res.json())
@@ -138,9 +138,10 @@ function SearchProduct(evt) {
         fetch('https://bsalebackend-production.up.railway.app/productApi.php?name='+product, {
             method: "GET",
             headers: {"Content-type": "application/json;charset=UTF-8",
-                    "access-control-allow-origin": "*",
+                    "access-control-allow-origin": "https://bsaleforntend-production.up.railway.app/",
                     'Access-Control-Allow-Headers': 'Content-Type, Authorization',
                     'Access-Control-Allow-Methods': '*',
+                    'Access-Control-Allow-Credentials': 'true'
             }
         })
         .then(res => res.json())
