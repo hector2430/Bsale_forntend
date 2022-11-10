@@ -26,8 +26,6 @@ function modCategory(category) {
     //Peticion a API
     fetch('https://bsalebackend-production.up.railway.app/categoryApi.php?categoryid='+category, {
         method: "GET",
-        mode: "no-cors",
-        headers: { "access-control-allow-origin": "*",}
     })
     .then(res => res.json())
     .then(data => {
@@ -59,8 +57,6 @@ function getCategories() {
     //Peticion a API
     fetch('https://bsalebackend-production.up.railway.app/categoryApi.php', {
         method: "GET",
-        mode: "no-cors",
-        headers: { "access-control-allow-origin": "*",}
     })
     .then(res => res.json())
     .then(data => {
@@ -86,8 +82,6 @@ function getproduct() {
     //Peticion a API
     fetch('https://bsalebackend-production.up.railway.app/productApi.php', {
         method: "GET",
-        mode: "no-cors",
-        headers: { "access-control-allow-origin": "*",}
     })
     .then(res => res.json())
     .then(data => {
@@ -99,7 +93,7 @@ function getproduct() {
 
         for (let index = 0; index < obj.product.length; index++) {        
             //validacion de link imagen   
-            if(obj.product[index].url_image == ""){
+            if(obj.product[index].url_image == "" || obj.product[index].url_image=='null' ){
                 obj.product[index].url_image="img/noImagen.png"
             }     
             //Creacion de lista de productos
@@ -115,7 +109,7 @@ function SearchProduct(evt) {
     var productname=document.getElementById("searchProduct");
     var productnameMobile=document.getElementById("searchProductMobile"); 
     //validacion de dato ingresado por el usuario
-    if(productname.value!="" ||productnameMobile.value !=""  ){
+    if(productname.value!="" ||productnameMobile.value !="" || obj.product[index].url_image=='null' ){
         if(productname.value!=""){
             var product=productname.value;
         }else
@@ -125,9 +119,6 @@ function SearchProduct(evt) {
         //Peticion a API
         fetch('https://bsalebackend-production.up.railway.app/productApi.php?name='+product, {
             method: "GET",
-            mode: "no-cors",
-            headers: { "access-control-allow-origin": "*",
-            }
         })
         .then(res => res.json())
         .then(data => {
@@ -145,7 +136,7 @@ function SearchProduct(evt) {
             }else{
                 for (let index = 0; index < obj.product.length; index++) {  
                     //validacion de link imagen   
-                    if(obj.product[index].url_image == ""){
+                    if(obj.product[index].url_image == ""|| obj.product[index].url_image=='null'){
                         obj.product[index].url_image="img/noImagen.png"
                     }     
                     //Creacion de lista de productos
