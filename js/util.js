@@ -27,6 +27,7 @@
         function modCategory(category) {
             fetch('https://bsalebackend-production.up.railway.app/categoryApi.php?categoryid='+category, {
                 method: "GET",
+                mode: "no-cors",
                 headers: {"Content-type": "application/json;charset=UTF-8"}
             })
             .then(res => res.json())
@@ -55,6 +56,7 @@
         function getCategories() {
             fetch('https://bsalebackend-production.up.railway.app/categoryApi.php', {
                 method: "GET",
+                mode: "no-cors",
                 headers: {"Content-type": "application/json;charset=UTF-8"}
             })
             .then(res => res.json())
@@ -78,6 +80,7 @@
         function getproduct() {
             fetch('https://bsalebackend-production.up.railway.app/productApi.php', {
                 method: "GET",
+                mode: "no-cors",
                 headers: {"Content-type": "application/json;charset=UTF-8"}
             })
             .then(res => res.json())
@@ -112,6 +115,7 @@
                 }
                 fetch('https://bsalebackend-production.up.railway.app/productApi.php?name='+product, {
                     method: "GET",
+                    mode: "no-cors",
                     headers: {"Content-type": "application/json;charset=UTF-8"}
                 })
                 .then(res => res.json())
