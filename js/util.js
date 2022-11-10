@@ -42,7 +42,7 @@ function modCategory(category) {
         }else{
             for (let index = 0; index < obj.product.length; index++) {    
                 //validacion de link imagen   
-                if(obj.product[index].url_image == ""){
+                if(obj.product[index].url_image == "" || obj.product[index].url_image==null ){
                     obj.product[index].url_image="img/noImagen.png"
                 }     
                 //Creacion de lista de productos
@@ -109,7 +109,7 @@ function SearchProduct(evt) {
     var productname=document.getElementById("searchProduct");
     var productnameMobile=document.getElementById("searchProductMobile"); 
     //validacion de dato ingresado por el usuario
-    if(productname.value!="" ||productnameMobile.value !="" || obj.product[index].url_image==null ){
+    if(productname.value!="" || productnameMobile.value !=""){
         if(productname.value!=""){
             var product=productname.value;
         }else
@@ -136,7 +136,7 @@ function SearchProduct(evt) {
             }else{
                 for (let index = 0; index < obj.product.length; index++) {  
                     //validacion de link imagen   
-                    if(obj.product[index].url_image == ""|| obj.product[index].url_image==null){
+                    if(obj.product[index].url_image == "" || obj.product[index].url_image==null){
                         obj.product[index].url_image="img/noImagen.png"
                     }     
                     //Creacion de lista de productos
