@@ -26,7 +26,7 @@ function modCategory(category) {
     //Peticion a API
     fetch('https://bsalebackend-production.up.railway.app/categoryApi.php?categoryid='+category, {
         method: "GET",
-        mode: "cors",
+        mode: "no-cors",
         headers: {"Content-type": "application/json;charset=UTF-8",
                 "access-control-allow-origin": "*",
                 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
@@ -63,7 +63,7 @@ function getCategories() {
     //Peticion a API
     fetch('https://bsalebackend-production.up.railway.app/categoryApi.php', {
         method: "GET",
-        mode: "cors",
+        mode: "no-cors",
         headers: {"Content-type": "application/json;charset=UTF-8",
                 "access-control-allow-origin": "*",
                 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
@@ -94,7 +94,7 @@ function getproduct() {
     //Peticion a API
     fetch('https://bsalebackend-production.up.railway.app/productApi.php', {
         method: "GET",
-        mode: "cors",
+        mode: "no-cors",
         headers: {"Content-type": "application/json;charset=UTF-8",
                 "access-control-allow-origin": "*",
                 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
@@ -137,7 +137,7 @@ function SearchProduct(evt) {
         //Peticion a API
         fetch('https://bsalebackend-production.up.railway.app/productApi.php?name='+product, {
             method: "GET",
-            mode: "cors",
+            mode: "no-cors",
             headers: {"Content-type": "application/json;charset=UTF-8",
                     "access-control-allow-origin": "*",
                     'Access-Control-Allow-Headers': 'Content-Type, Authorization',
