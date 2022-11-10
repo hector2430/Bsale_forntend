@@ -26,10 +26,11 @@ function modCategory(category) {
     //Peticion a API
     fetch('https://bsalebackend-production.up.railway.app/categoryApi.php?categoryid='+category, {
         method: "GET",
-        headers: {
+        mode: "cors",
+        headers: {"Content-type": "application/json;charset=UTF-8",
+                "access-control-allow-origin": "*",
                 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
                 'Access-Control-Allow-Methods': '*',
-                'Access-Control-Allow-Credentials': 'true'
         }
     })
     .then(res => res.json())
@@ -62,10 +63,11 @@ function getCategories() {
     //Peticion a API
     fetch('https://bsalebackend-production.up.railway.app/categoryApi.php', {
         method: "GET",
-        headers: {
+        mode: "cors",
+        headers: {"Content-type": "application/json;charset=UTF-8",
+                "access-control-allow-origin": "*",
                 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
                 'Access-Control-Allow-Methods': '*',
-                'Access-Control-Allow-Credentials': 'true'
         }
     })
     .then(res => res.json())
@@ -92,10 +94,11 @@ function getproduct() {
     //Peticion a API
     fetch('https://bsalebackend-production.up.railway.app/productApi.php', {
         method: "GET",
-        headers: {
+        mode: "cors",
+        headers: {"Content-type": "application/json;charset=UTF-8",
+                "access-control-allow-origin": "*",
                 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
                 'Access-Control-Allow-Methods': '*',
-                'Access-Control-Allow-Credentials': 'true'
         }
     })
     .then(res => res.json())
@@ -134,10 +137,11 @@ function SearchProduct(evt) {
         //Peticion a API
         fetch('https://bsalebackend-production.up.railway.app/productApi.php?name='+product, {
             method: "GET",
-            headers: {
+            mode: "cors",
+            headers: {"Content-type": "application/json;charset=UTF-8",
+                    "access-control-allow-origin": "*",
                     'Access-Control-Allow-Headers': 'Content-Type, Authorization',
                     'Access-Control-Allow-Methods': '*',
-                    'Access-Control-Allow-Credentials': 'true'
             }
         })
         .then(res => res.json())
