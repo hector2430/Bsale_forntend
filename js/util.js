@@ -30,7 +30,6 @@ function modCategory(category) {
                 "access-control-allow-origin": "*",
                 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
                 'Access-Control-Allow-Methods': '*',
-                'mode': 'no/cors'
         }
     })
     .then(res => res.json())
@@ -67,7 +66,6 @@ function getCategories() {
                 "access-control-allow-origin": "*",
                 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
                 'Access-Control-Allow-Methods': '*',
-                'mode': 'no/cors'
         }
     })
     .then(res => res.json())
@@ -98,7 +96,6 @@ function getproduct() {
                 "access-control-allow-origin": "*",
                 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
                 'Access-Control-Allow-Methods': '*',
-                'mode': 'no/cors'
         }
     })
     .then(res => res.json())
@@ -141,7 +138,6 @@ function SearchProduct(evt) {
                     "access-control-allow-origin": "*",
                     'Access-Control-Allow-Headers': 'Content-Type, Authorization',
                     'Access-Control-Allow-Methods': '*',
-                    'mode': 'no/cors'
             }
         })
         .then(res => res.json())
