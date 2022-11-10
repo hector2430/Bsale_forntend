@@ -25,8 +25,7 @@
             $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
         }
         function modCategory(category) {
-            var grid=document.getElementById("contenido");
-            fetch('http://localhost/proyectos/bsale_test/back-end/categoryApi.php?categoryid='+category, {
+            fetch('https://bsalebackend-production.up.railway.app/categoryApi.php?categoryid='+category, {
                 method: "GET",
                 headers: {"Content-type": "application/json;charset=UTF-8"}
             })
@@ -54,7 +53,7 @@
             });            
         }
         function getCategories() {
-            fetch('http://localhost/proyectos/bsale_test/back-end/categoryApi.php', {
+            fetch('https://bsalebackend-production.up.railway.app/categoryApi.php', {
                 method: "GET",
                 headers: {"Content-type": "application/json;charset=UTF-8"}
             })
@@ -77,7 +76,7 @@
             });
         }
         function getproduct() {
-            fetch('http://localhost/proyectos/bsale_test/back-end/productApi.php', {
+            fetch('https://bsalebackend-production.up.railway.app/productApi.php', {
                 method: "GET",
                 headers: {"Content-type": "application/json;charset=UTF-8"}
             })
@@ -111,7 +110,7 @@
                 {
                     var product=productnameMobile.value;
                 }
-                fetch('http://localhost/proyectos/bsale_test/back-end/productApi.php?name='+product, {
+                fetch('https://bsalebackend-production.up.railway.app/productApi.php?name='+product, {
                     method: "GET",
                     headers: {"Content-type": "application/json;charset=UTF-8"}
                 })
