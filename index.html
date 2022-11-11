@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La tienda</title>
+    <title>Drinkez</title>
     <!--bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
@@ -20,26 +20,20 @@
  
 </head>
 <body >
-
+<body >
     <nav class="navbar navbar-expand-md navbar-dark bg-info">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" style="color:white" >
-          <span class="menu-collapsed">La Tienda</span>
-        </a>
         <div class="collapse navbar-collapse " id="navbarNavDropdown">
           <ul class="navbar-nav">
-            <li class="nav-item" id="buscarform">
-                <form class="d-flex "  role="search">
-                    <input class="form-control me-2 sidebar-expanded d-none d-md-block" type="search" placeholder="Buscar Producto" id="searchProduct" aria-label="Search" style="margin-left:7em;" >
-                    <button class="btn btn-outline-dark bg-dark sidebar-expanded d-none d-md-block" style="color:white;width:5rem" onclick="SearchProduct(event)">Buscar</button>
-                </form>
-            </li>
+
+
             <li class="nav-item dropdown d-sm-block d-md-none">
-                <input class="form-control me-2 sidebar-expanded  d-md-block" type="search" placeholder="Buscar Producto" style="width:10rem" id="searchProductMobile" aria-label="Search" >
-                <button class="btn btn-outline-dark bg-dark sidebar-expanded d-md-block" style="color:white;width:10rem" onclick="SearchProduct(event)">Buscar</button>
+                <input class="form-control me-2 sidebar-expanded  d-md-block" type="search" placeholder="Buscar Producto" id="searchProductMobile" aria-label="Search" >
+                <button class="btn btn-outline-dark bg-dark sidebar-expanded d-md-block" style="color:white;" onclick="SearchProduct(event)">Buscar</button>
             </li>
+
             <li class="nav-item dropdown d-sm-block d-md-none">
               <a class="nav-link dropdown-toggle" href="#" id="smallerscreenmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Categorias
@@ -48,6 +42,14 @@
               </div>
             </li>
           </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" id="buscarform">
+                    <form class="d-flex "  role="search">
+                        <input class="form-control me-2 sidebar-expanded d-none d-md-block " type="search" placeholder="Buscar Producto" id="searchProduct" aria-label="Search"  >
+                        <button class="btn btn-outline-dark bg-dark sidebar-expanded d-none d-md-block" style="color:white;width:5rem;" onclick="SearchProduct(event)">Buscar</button>
+                    </form>
+                </li>
+            </ul>
         </div>
       </nav>
       <div id="searchproductmodal" class="modal" tabindex="-1" role="dialog">
@@ -77,6 +79,7 @@
         <div class="col">
         <section style="background-color: #eee;">
             <div class="text-center container py-5">
+                <img class=" img-fluid" src="img/logo.svg" style="width: 24rem;" >
                 <h4 class="mt-4 mb-5"><strong>Lista de Productos</strong></h4>
                 <div class="row" id="contenido">
 
