@@ -71,8 +71,8 @@ function getCategories() {
         aside.innerHTML += contenido;
         for (let index = 0; index < obj.category.length; index++) {
             //creacion de lista de categorias
-            contenido='<a class="bg-dark list-group-item list-group-item-action" style="cursor: pointer;" onclick="modCategory(\''+obj.category[index].id+'\')""> <div class="d-flex w-100 justify-content-start align-items-center"> <span class="fa fa-tasks fa-fw mr-3"></span><span class="menu-collapsed">'+obj.category[index].name+'</span> <span class="badge badge-primary badge-pill bg-primary">'+obj.category[index].total+'</span></li></div></a>'
-            mobile.innerHTML+='<a class="dropdown-item"style="cursor: pointer;" onclick="modCategory(\''+obj.category[index].id+'\')"" >'+obj.category[index].name+'</a>';
+            contenido='<a class="bg-dark list-group-item list-group-item-action" style="cursor: pointer;text-transform: capitalize;" onclick="modCategory(\''+obj.category[index].id+'\')""> <div class="d-flex w-100 justify-content-start align-items-center"> <span class="fa fa-tasks fa-fw mr-3"></span><span class="menu-collapsed">'+obj.category[index].name+'</span> <span class="badge badge-primary badge-pill bg-primary">'+obj.category[index].total+'</span></li></div></a>'
+            mobile.innerHTML+='<a class="dropdown-item"style="cursor: pointer; text-transform: capitalize;" onclick="modCategory(\''+obj.category[index].id+'\')"" >'+obj.category[index].name+'</a>';
             aside.innerHTML += contenido;
         }
     });
@@ -140,7 +140,7 @@ function SearchProduct(evt) {
                         obj.product[index].url_image="img/noImagen.png"
                     }     
                     //Creacion de lista de productos
-                    var contenido='<div class="col-lg-4 col-md-6 mb-4"><div class="card"><div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light"><img src="'+obj.product[index].url_image+'" style="height: 20rem;" class="w-100" /></div><div class="card-body"><a href="" class="text-reset"><h5 class="card-title mb-3">'+obj.product[index].name+'</h5></a><h6 class="mb-3"><strong class="ms-2 ">$'+obj.product[index].price+'</strong></h6></div></div></div>';
+                    var contenido='<div class="col-lg-4 col-md-6 mb-4"><div class="card"><div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light"><img src="'+obj.product[index].url_image+'" style="height: 20rem;" class="w-100" /></div><div class="card-body"><a  class="text-reset"><h5 class="card-title mb-3">'+obj.product[index].name+'</h5></a><h6 class="mb-3"><strong class="ms-2 ">$'+obj.product[index].price+'</strong></h6></div></div></div>';
                     grid.innerHTML += contenido+'';
                 }
             }
