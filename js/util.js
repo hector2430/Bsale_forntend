@@ -148,6 +148,7 @@ function SearchProduct(evt) {
     }else{
         document.getElementById("mensaje").innerHTML="No se ha podido encontrar coincidencias con la búsqueda realizada <br><br> Mostrando todos los productos...";
         $("#searchproductmodal").modal('show');
+        getproduct();
     }
 }
 //Cerrar modal
